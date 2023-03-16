@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.edit-popup {
+  display: inline-block;
+  position: absolute;
+  z-index: 9999;
+  /* other styles */
+}

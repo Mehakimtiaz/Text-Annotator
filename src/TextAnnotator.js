@@ -172,3 +172,104 @@ class TextAnnotator extends React.Component {
 export default (TextAnnotator);
 
 
+// import React, {
+//   Component
+// } from 'react';
+
+// class EditPopup extends Component {
+//   render() {
+//     const {
+//       text,
+//       x,
+//       y
+//     } = this.props;
+//     const style = {
+//       position: 'absolute',
+//       left: x + 20 + 'px',
+//       top: y + 20 + 'px',
+//     };
+//     return ( <
+//       div className = "edit-popup"
+//       style = {
+//         style
+//       } >
+//       <
+//       textarea value = {
+//         text
+//       }
+//       /> <
+//       button > Save < /button> <
+//       /div>
+//     );
+//   }
+// }
+
+// class TextAnnotator extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       selectedText: '',
+//       popupPosition: {
+//         x: 0,
+//         y: 0
+//       },
+//     };
+//     this.pRef = React.createRef();
+//   }
+
+//   handleTextSelect = () => {
+//     const selection = window.getSelection();
+//     const selectedText = selection.toString().trim();
+//     this.setState({
+//       selectedText
+//     });
+
+//     if (selectedText) {
+//       const range = selection.getRangeAt(0);
+//       const boundingRect = range.getBoundingClientRect();
+//       const parentBoundingRect = this.pRef.current.getBoundingClientRect();
+
+//       const x = boundingRect.left - parentBoundingRect.left;
+//       const y = boundingRect.top - parentBoundingRect.top + boundingRect.height;
+//       this.setState({
+//         popupPosition: {
+//           x,
+//           y
+//         }
+//       });
+//     }
+//   };
+
+//   render() {
+//     const {
+//       selectedText,
+//       popupPosition
+//     } = this.state;
+
+//     return ( < div >
+//       <
+//       p ref = {
+//         this.pRef
+//       }
+//       onMouseUp = {
+//         this.handleTextSelect
+//       } >
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit
+//       .Donec vitae ullamcorper nunc.Suspendisse potenti.Aenean dictum elit eu felis convallis, at consequat purus pharetra.Quisque ac ante odio. <
+//       /p> {
+//         selectedText && ( < EditPopup text = {
+//             selectedText
+//           }
+//           x = {
+//             popupPosition.x
+//           }
+//           y = {
+//             popupPosition.y
+//           }
+//           />
+//         )
+//       } < /div>
+//     );
+//   }
+// }
+// export default TextAnnotator;

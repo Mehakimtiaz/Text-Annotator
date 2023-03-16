@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.edit-popup {
+  display: inline-block;
+  position: absolute;
+  z-index: 9999;
+}
